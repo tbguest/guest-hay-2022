@@ -1,0 +1,617 @@
+%% 
+%% Copyright 2007-2019 Elsevier Ltd
+%% 
+%% This file is part of the 'Elsarticle Bundle'.
+%% ---------------------------------------------
+%% 
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%% 
+%% The list of all files belonging to the 'Elsarticle Bundle' is
+%% given in the file `manifest.txt'.
+%% 
+%% Template article for Elsevier's document class `elsarticle'
+%% with harvard style bibliographic references
+
+\documentclass[preprint,12pt,authoryear]{elsarticle}
+
+%% Use the option review to obtain double line spacing
+%% \documentclass[authoryear,preprint,review,12pt]{elsarticle}
+
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+%% \documentclass[final,1p,times,authoryear]{elsarticle}
+%% \documentclass[final,1p,times,twocolumn,authoryear]{elsarticle}
+%% \documentclass[final,3p,times,authoryear]{elsarticle}
+%% \documentclass[final,3p,times,twocolumn,authoryear]{elsarticle}
+%% \documentclass[final,5p,times,authoryear]{elsarticle}
+%% \documentclass[final,5p,times,twocolumn,authoryear]{elsarticle}
+
+%% For including figures, graphicx.sty has been loaded in
+%% elsarticle.cls. If you prefer to use the old commands
+%% please give \usepackage{epsfig}
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers.
+\usepackage{lineno}
+
+% for full page table
+\usepackage{pdflscape}
+
+\journal{Marine Geology}
+
+\begin{document}
+
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for theassociated footnote;
+%% use the fnref command within \author or \address for footnotes;
+%% use the fntext command for theassociated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for theassociated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+%% \author{Name\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \address{Address\fnref{label3}}
+%% \fntext[label3]{}
+
+\title{Morpho-sedimentary dynamics of a megatidal mixed sand-gravel beach}
+%\title{Bed level and mean grain size dynamics on a steep mixed sand-gravel beach}
+
+%% use optional labels to link authors explicitly to addresses:
+%% \author[label1,label2]{}
+%% \address[label1]{{Department of Oceanography, Dalhousie University, Halifax, Nova Scotia, B3H 4R2, Canada}}
+%% \address[label2]{}
+
+\author[label1]{Tristan B. Guest\corref{cor1}}
+\cortext[cor1]{Corresponding author.}
+\ead{tristan.guest@dal.ca}
+\author[label1]{Alex E. Hay}
+\address[label1]{{Department of Oceanography, Dalhousie University, Halifax, Nova Scotia, B3H 4R2, Canada}}
+
+%\author{Tristan B. P. Guest}
+
+%\address{}
+
+\begin{abstract}
+%% Text of abstract
+
+%Sediment dynamics on mixed sand-gravel (MSG) beaches have received much less attention in the literature than on sandy beaches. The steep slopes characteristic of MSG beaches result in an energetic shorebreak, accompanied by ballistic transport of gravel- and cobble-sized grains. The associated risks of damage to \textit{in situ} instrumentation have contributed to the relative scarcity of observational data.
+
+Results are presented from a field study at Advocate Beach, Nova Scotia, a 1:10 slope megatidal mixed sand-gravel beach near the head of the Bay of Fundy. The bed level and the surficial mean grain size responses are investigated using GPS and photographic surveys of the intertidal beach. A strong negative correlation exists between the surficial mean grain size and both the incident wave height and the wave steepness. Positive spatial correlations between changes in bed level and the surficial mean grain size from one low tide to the next persist regardless of the forcing conditions. The spatial correlations are attributed to the formation of ephemeral morpho-sedimentary features in the intertidal zone through feedback processes in the ebb tide swash. The results are discussed in the context of a morpho-sedimentary dynamics framework, emphasising the intrinsic interrelationships between morphology, flow, and the broad surficial grain size distribution.
+
+
+\end{abstract}
+
+%%%Graphical abstract
+%\begin{graphicalabstract}
+%%\includegraphics{grabs}
+%\end{graphicalabstract}
+
+%%Research highlights
+\begin{highlights}
+\item Surficial fining of beach sediments corresponded to energetic wave forcing
+\item Changes in bed level and mean grain size are spatially correlated throughout the intertidal zone
+
+\end{highlights}
+
+\begin{keyword}
+%% keywords here, in the form: keyword \sep keyword
+morphodynamics \sep mean grain size \sep grain size segregation \sep swash zone
+
+%% PACS codes here, in the form: \PACS code \sep code
+
+%% MSC codes here, in the form: \MSC code \sep code
+%% or \MSC[2008] code \sep code (2000 is the default)
+
+\end{keyword}
+
+\end{frontmatter}
+
+\linenumbers
+
+%% main text
+%\section{}
+%\label{}
+
+\section{Introduction}\label{Introduction}
+
+Mixed sand-gravel (MSG) beaches represent one of three geomorphic subtypes of gravel beach, the other two subtypes being pure gravel and composite gravel, as outlined by \citet{Jennings_Shulmeister2002}. MSG beaches are generally characterised by a swash-dominated hydrodynamic regime, and well-mixed sediments both across-shore and at depth. The need for improved understanding of MSG beach processes has been emphasised in the literature of the last two decades, given the relative stability of coarse grained beaches in the face of energetic conditions and rising sea levels, and the increasing usage of mixed-sized sediments in beach replenishment schemes \citep{Mason_Coates2001}. 
+
+% p: Something about relationship between morphology and sediments
+
+Of particular note in understanding the evolution of MSG beaches is the relationship between beach surface texture, as determined by properties of the surficial grain size distribution, and the hydrodynamics, groundwater dynamics (hydraulics), and morphology. The morphodynamic model \citep{Wright_Thom1977, Buscombe_Masselink2006}, which for decades has been used to describe the evolution of sandy coastlines, cannot account for the changes in the morphological response that result from textural differences in bed state. Though linkages between bed texture and morphology have been discussed in the literature for decades \citep[e.g.,][]{LonguetHiggins_Parkin1962, Moss1962, Isla1993, Carter_Orford1993, Sherman_etal1993, Masselink_Li2001, Buscombe_Masselink2006, Masselink_etal2007, Austin_Buscombe2008, VanGaalen_etal2011, Guest_Hay2019}, the relative importance of sedimentary feedbacks in morphological evolution remains unclear. In their gravel beach review paper, \citet{Buscombe_Masselink2006} proposed ``morpho-sedimentary dynamics'' (MSD) as a preferred framework within which to carry out future research on gravel beaches. The framework treats differences in bed texture resulting from variations in the characteristics of the surficial grain size distribution as an intrinsic component of the dynamics of morphological evolution. 
+
+% p: transport in MSG
+
+Sediment transport on MSG beaches is governed by complex interactions between forcing by waves and tides \citep{Nordstrom_Jackson1993}, grains of different size and shape \citep{Stark_etal2014, Stark_Hay2016}, and hydraulic effects \citep[in/exfiltration and groundwater response;][]{Horn2006}. Spatial and temporal variability in grain size properties, hydraulic conductivity, and mobilisation thresholds, along with transport regimes which may be characterised by conditions of fractional mobilisation of material \citep[e.g.,][]{Wilcock_Crowe2003}, or dependence of individual particle transport on the background substrate \citep{Carter_Orford1993}, pose a challenge for the incorporation of MSG transport in contemporary predictive models. Indeed, there are indications that the phenomenological response of MSG beach sediments to forcing may be fundamentally different from the response expected on a sand beach: Several authors reporting on MSG beach sedimentology \citep{Nordstrom_Jackson1993, Pontee_etal2004, Curtiss_etal2009, Miller_etal2011, Hay_etal2014} have observed decreases in the mean grain size of beach surface sediments in response to energetic wave forcing, and surficial coarsening following fairweather conditions. On sandy beaches, the conventional understanding is of offshore transport of finer material during instances of increased wave height and steepness, due to swash velocity asymmetry, and onshore transport during low energy forcing, leading to differences in beach characteristics seasonally, or with differences in orientation \citep[e.g.,][]{Bascom1951}. The typically anticipated positive relationship between forcing and surficial grain size on sandy beaches is implicit in recent grain size response modelling efforts \citep[see][]{Prodger_etal2016}, which have been shown to predict the mean surficial grain size with considerable skill.
+
+There are few examples in the field literature of studies designed to investigate the correlation between morphological and sedimentary (hereafter, morpho-sedimentary) dynamics. Those studies that have sought signatures of correlation between bed level and grain size have had mixed results. \citet{Masselink_etal2007} surveyed bed level and grain size across the profile of a macrotidal sandy beach over a 20 day period. They reported changes in mean grain size and sorting that were mostly unrelated to the morphological response, with two exceptions wherein instances of erosion were associated with bed surface coarsening. \citet{Austin_Buscombe2008} collected observations of bed level and grain size properties across the intertidal zone of a macrotidal gravel beach over the course of a tidal cycle. They reported some positive correlation between mean grain size and bed level change at the locations of the berm and the step, though distinct phases of morphological change were not otherwise evident in the sedimentary signal. Both \citet{Masselink_etal2007} and \citet{Austin_Buscombe2008} acknowledged their sampling strategies as a potential limitation on revealing clearer trends in the grain size measures.
+
+Mixed substrates have been suggested to favour the formation of transient, secondary morphological features or patterns on the beach surface, including beach cusps \citep[e.g.,][]{LonguetHiggins_Parkin1962, Guest_Hay2019}. The tendency for gravel (especially MSG) beach sediments to display heterogeneity in space and time, and to self-organise into sorted sediment structures with linkages to morphological features \citep[e.g.,][]{Sherman_etal1993, Austin_Buscombe2008} makes MSG beaches well suited to investigations of the coevolution of morphology and grain size. 
+
+% p: Objectives + layout
+
+Here, results are presented from a 2018 field study of a MSG beach. The study made use of survey observations of beach surface elevation and mean surficial grain size sampled at low tides over a two-week period. The objective of this study is to investigate the coevolution of bed elevation and mean grain size, seeking insight into the phenomenological role of grain size in swash zone morphological evolution, and to discuss the observed and uncommon phenomenon of MSG beach surficial sediment fining immediately following energetic forcing events. %The chapter is organized as follows... .
+
+
+\section{Site description}\label{Site}
+%
+%[not needed in chapter; will be needed in paper]
+%
+%With the exception of tidally transient sediment structures on the beach surface (e.g. beach cusps, patchiness), the beach is alongshore uniform, and generally well-described in terms of the across-shore profile. 
+%
+%Incident waves are generally broad banded, wind-generated. waves break directly on the beach surface, with no clearly defined surf zone. As such, swash periods generally reflect the period of the incident waves, with little or no opportunity for long wave generation. 
+%
+%% forcing section?:
+%Despite the steep slope, the conditions at Advocate Beach can generally be described as dissipative,  owing to the typically steep, sea-band incident waves ($R^{2} \approx 0.14$ for the Advocate 2018 experiment, approximated using the Miche equation: Miche (1951), Elgar et al (1994)[herbers guza JPO])
+%
+%Grain size distribution is broad, and is best described by a log-normal distribution. 
+
+%The field site is Advocate Beach, Nova Scotia, Canada. The site is positioned near the head of the Bay of Fundy, and therefore experiences a large tide range of 8 to 12 m. 
+
+
+\begin{figure}[tbp] %/home/tristan/Documents/Projects/AdvocateBeach2018/src/visualization/plot_beach_profile_data.py
+	\includegraphics[width=\columnwidth]{figures/chapter3/Advocate_map_with_inset.png}
+	\caption{Map indicating the location of Advocate Beach (red box), Nova Scotia, Canada, near the head of the Bay of Fundy. \label{fig:Advocate_map}}
+\end{figure}
+
+Advocate Beach is a mixed sand-gravel barrier beach positioned near the head of the Bay of Fundy in Nova Scotia, Canada (Fig. \ref{fig:Advocate_map}). Based on the 8-12 m tidal range, Advocate beach can be classed as megatidal rather than macrotidal \citep{Levoy_etal2000}. The beach separates the headlands of Cape Chignecto to the west and Cape D'Or to the southeast, and is 5 km long with a nearly linear shoreline. The beach face is steep (approximately 1 in 10 slope) and the sediments poorly sorted, ranging from medium sand to cobbles and boulders greater than 20 cm in diameter. From the lower beach face to beneath lowest low water, the sediment composition transitions to cobble and boulder-sized material. From the southwest, the beach is exposed to the full 500 km fetch of the Bay of Fundy and adjacent Gulf of Maine, but is otherwise more fetch-limited. At low tide, the beach is observed to be uniformly planar with crest to low water distance as much as 100 m in spring tides \citep[see][]{Taylor_etal1985, Hay_etal2014}. 
+
+During and after fairweather forcing, an active high tide berm can commonly be observed near the high water line. One or more relict berms may be present landward of the active berm, particularly during neap tides. The berm composition is generally of coarser material than that found in the intertidal zone, consisting of relatively well sorted gravel and cobbles. Following periods of energetic wave forcing, the beach appears free of distinct morphological features, and the beach surface sediments are predominantly sandy. Episodes of pattern formation and surficial sediment sorting often occur at Advocate Beach, commonly in the form of beach cusps on the upper beach face. The cusps generally appear as well-organised sediment structures near the high water line, often extending tens of metres seaward, forming cross-shore bands of loose gravel and cobbles separated by sandy embayments. The beach experiences changes in forcing conditions over tidal time scales, which is reflected by daily changes in surficial sediment composition and topography. Consequently, cusp episodes at Advocate Beach are generally limited to a single tide.
+
+During storms, peak incident wave periods typically fall within the wind-wave band ($T_p$ = 4-7 seconds), with longer period swell usually limited to the weaker wave forcing conditions between storms. The combination of a steep beach slope and typically short period, wind-generated incident waves result in a highly energetic shore break for offshore significant wave heights of \textit{ca}. 0.5 m and larger \citep{Hay_etal2014}. Under average forcing conditions, the beach is best described as dissipative rather than reflective, which is uncommon for beaches of similar composition and profile type \citep[e.g.,][]{Wright_etal1979}. For example, the mean reflectivity computed for a two week period in October 2018 was $R^2=0.14$, where $R^2$ is an approximation of the ratio of seaward to shoreward propagating wave energy, computed as a Miche number \citep{Miche1951}, following the method of \citet{Elgar_etal1994}. Driftwood and other mobile flotsam are often present in the shorebreak, providing additional hazards to \textit{in situ} instrumentation over and above the impacts from coarse-grained sediment projectiles propelled by the high water velocities in the shorebreak and surf.
+
+For additional information on Advocate Beach, including its history and more detailed descriptions of hydrodynamic processes, see \citet{Taylor_etal1985}, \citet{Wilson_etal2014}, and \citet{Hay_etal2014}.
+
+
+
+\section{Methods}\label{Methods}
+
+\subsection{Experiment Overview}\label{Methods:Experiment}
+
+The field experiment was conducted between 14 and 27 October. The 27 tides spanned by the experiment are referred to herein by their low tide index: tides 1 through 27. %The focal point of the experiment was to investigate the coevolution of morphology and sedimentology, with an emphasis on processes in the swash zone.
+
+Beach-scale monitoring of bed elevation and beach surface grain size was carried out using RTK (real time kinematic) GPS and camera surveys. Local grid coordinates were defined in keeping with previous experiments at the site \citep[see][]{Guest_Hay2017, Guest_Hay2019}, with the origin defined as the former position of a vertical pressure sensor array, approximately 20 m seaward of the nominal high tide shoreline. The coordinate system is such that $x$ is alongshore, positive to the northwest, and $y$ is positive offshore. A survey grid was established (see Fig. \ref{fig:survey_grids}), consisting of one cross-shore beach transect spanning 90 m ($y=$-30 to 60 m in local grid coordinates) and two longshore transects spanning 75 m ($x=$-50 to 25 m), all sampled at 3 m intervals, and a more densely sampled grid consisting of six 24 m longshore transects spaced at 1 m intervals, and 2 m intervals across-shore ($x=$-24 to -1 m, $y=$-15 to -5 m). The cross-shore transect (hereafter referred to as CT) extended from the beach crest to the mean spring tide low water shoreline along the $x=0$ m coordinate, though the number of surveyed points differed from tide to tide depending on the shoreline position at the time of the survey. The two longshore transects were positioned on the upper beach face, but seaward of the nominal high water line. The most seaward transect (LT1) was positioned at $y=-5$ m, and the more shoreward transect (LT2) at $y=-12$ m. The densely sampled grid (DG), and the larger grid layout in general, were designed to encompass the high tide shoreline, in order to emphasise high tide swash processes. 
+
+\begin{figure}[tbp] %/home/tristan/Documents/Projects/AdvocateBeach2018/src/visualization/plot_beach_profile_data.py
+	\includegraphics[width=\columnwidth]{figures/chapter3/plan_view/survey_grids.png}
+	\caption[Advocate Beach aerial photograph and survey grid configuration]{Aerial photograph of Advocate Beach, with the survey configuration overlaid. A GPS point and photograph were taken at each survey station (yellow dot), each low tide. The survey layout consisted of four subsets: one cross-shore transect (CT), two longshore transects (LT1 and LT2), and a more densely sampled grid (DG). The red dot indicates the position of the pressure transducer (PT). \label{fig:survey_grids}}
+\end{figure}
+
+The survey grid was sampled every low tide from tide 14 to 27, an RTK GPS position and photograph being taken at each grid point. Photographs were taken using a 20 megapixel Canon Powershot Elph 190 camera, mounted to a tripod at fixed height. Prior to tide 14, different grid configurations were surveyed, and only one survey was conducted per day (i.e., once per two tides). Data collected prior to tide 14 are not included here. 
+
+The cross-shore coordinate of the high water line (HWL; herein defined as the cross-shore coordinate of the high tide swash runup maximum) for each tide was determined post-experiment using the survey photography, by identifying features associated with the maximum swash runup limit: seaweed or similar flotsam, the transition from wet to dry substrate, or clear boundaries in sediment size or shape. Thus, given the cross-shore spacing of stations in grid DG, the HWL coordinates are considered accurate to within $\pm1$ m. 
+
+An RBR Duo pressure sensor was deployed on a heavily weighted frame resting on the bed near the neap low water shoreline to observe the ``offshore" wave climate. Due to a prolonged period of high winds and energetic wave conditions at the outset of the experiment, the pressure sensor was not deployed until the sixth day of the experiment (prior to tide 10). Pressure data were recorded at 6 Hz.
+
+The coevolution of beach morphology and sediment properties in the swash zone was investigated using an array of collocated ultrasonic range sensor and camera pairs, as well as an overhead camera used for monitoring tracer cobble transport. These data are not treated in this paper.
+
+\subsection{Digital Grain Sizing}\label{Methods:DGS}
+
+A wavelet-based digital grain sizing (DGS) package \citep[see][]{Buscombe2013}, implemented in Python, was used to estimate arithmetic grain size statistics from the camera imagery. The DGS algorithm does not require calibration, and takes as input a grain-resolving image containing only sediment. 
+
+The survey images were cropped to half width and height in the centre of each frame, corresponding to a field of view at the bed of 0.33$\times$0.25 m, with the camera height set at \textit{ca}. 0.3 m above the bed. Input parameters for the algorithm include a pixel to physical unit scaling, a maximum feature diameter to be resolved, and a dimensional scaling factor. The pixel to physical unit scaling was computed by photographing an object of known length and width. The same scaling was used for all survey images. The maximum feature diameter, defined as the inverse ratio of the pixel width of the frame to the width of the largest feature to be resolved, was set at 56 mm. The dimensional scale factor was set at 0.8. See \ref{Appendix} for a discussion of the choice of dimensional scale factor, as well as for more detailed descriptions of the remaining input parameters. 
+
+Though the algorithm is capable of returning a full grain size distribution, validation of the output against the distributions from both sieve and manual point count analyses \citep[see][or \ref{Appendix} for a description of the point count method]{Barnard_etal2007, Buscombe_etal2010} indicated that only the lowest moment of the grain size distribution (mean grain size) was captured satisfactorily. The validation of the higher order moments (i.e., sorting, skewness, kurtosis) revealed that they were not well estimated by the algorithm, so only the mean grain size results are included here. We attribute the algorithm's poor representation of the higher order moments to the wide grain size distribution. See \ref{Appendix} for further discussion of the validation procedures.
+
+
+\subsection{Correlation Analysis}\label{Methods:Correlation}
+
+Pearson correlation coefficients were computed between measures of bed level, $z$, and mean grain size, MGS, both defined at a given set of space and time coordinates: e.g., $z=z_{ij}(t)$, where the indices $i,j$ indicate the $x,y$ (longshore, cross-shore) coordinates, and $t$ is an integer low tide index. MGS and other, similar measures are equivalently defined. Changes in bed level and mean grain size from one tide to the next are denoted using $\Delta$ notation, e.g., $\Delta z = z_{ij}(t) - z_{ij}(t-1)$. Primed values denote observations associated with the previous time (i.e., tide) step, e.g., $z'=z_{ij}(t-1)$, and overbar notation is used where spatial averaging was done. That is, the spatial mean of the MGS observations for a survey transect with $N$ stations is given by 
+
+\begin{equation}\label{eq:mean}
+\overline{\mathrm{MGS}}_j = \frac{\sum_{i=1}^{N} \mathrm{MGS}_{ij}(t)}{N}. 
+\end{equation}
+
+\noindent Spatial means were computed only over longshore survey transects (note the summation over $i$ alone in equation (\ref{eq:mean})), since the observed properties -- notably MGS -- had a characteristic (i.e., non-Gaussian) structure in the across-shore. The subscript $j$, indicating the cross-shore coordinate associated with the transect over which the computation was made, is implicit in the equations below, but is hereafter omitted. The Pearson correlation coefficient for a given cross-shore coordinate associated with a given tide is
+
+\begin{equation}\label{eq:pearsons_r}
+r = \frac{\sum_{i=1}^{N}(X_i-\overline{X})(Y_i-\overline{Y})}{\sqrt{\sum_{i=1}^{N}(X_i-\overline{X})^2 (Y_i-\overline{Y})^2}},
+\end{equation}
+
+\noindent where $X$ and $Y$ are the observed properties.
+
+Correlation coefficients were computed between changes in bed elevation from the previous tide's survey ($\Delta z$) and: (1) the mean grain size (MGS), (2) the change in mean grain size from the previous survey ($\Delta$MGS), (3) the mean grain size observed during the previous survey (MGS$'$), and (4) the change in bed elevation from the preceding time step ($\Delta z'$). Correlation coefficients between hydrodynamic parameters, bed level, and mean grain size were also computed. 
+
+The $\Delta z$, $\Delta z'$ correlations were carried out based on the assumption that changes in bed level represent, on average, deviations from the mean profile. In other words, a positive $\Delta z$ value is indicative of a topographic high at a given location, relative to the mean profile. This correlation is susceptible to negative bias if noise levels are high relative to the actual topographic change. It can be shown using a synthetic series of Gaussian noise that the Pearson correlation coefficient of the series with itself at the previous index approaches -0.5 for a large number of samples. The RTK GPS is taken to be accurate to within $\pm$0.02 m in the $z$-direction. With the exception of points surveyed above the HWL, the distribution of $\Delta z$ values for a given survey generally exceeded the expected distribution of values due to instrument inaccuracy alone. As verification, correlation coefficients between $\Delta z$ and $\Delta z'$ were computed for stations landward of the HWL. These were found not to be significantly different from zero, suggesting that the potential for negative bias at stations seaward of the HWL -- where the range of true $\Delta z$ values would be expected to be larger -- is low.
+
+Because the distribution of mean grain sizes had a characteristic structure in the across-shore direction (coarser sediments at, and shoreward of, the berm region), only data from the longshore transects were cross-correlated (i.e., LT1, LT2, and each of the six rows of DG), to obtain meaningful correlations. In order to carry out correlations with large numbers of samples, $\Delta z$ and $\Delta$MGS observations for each longshore transect were combined, with their means removed at each tide step, and correlations carried out with the combined data sets. In other words, beach-scale changes in bed volume and mean grain size that may have resulted from, e.g., high energy forcing events, were removed, leaving only variations in longshore space relative to the mean of each transect.
+
+Measures for which subtracting the longshore spatial mean would be less meaningful, i.e., MGS and MGS$'$, were correlated with $\Delta z$ only for individual tides, and not combined. This treatment also omits large scale changes in bed level or mean grain size from tide to tide, instead emphasising spatial variations in the longshore direction.
+
+Temporal correlations were carried out between bed level, grain size, and hydrodynamic parameters by averaging the values from individual tides. Only data from the longshore survey transects were used for the bed level and grain size data. Thus,
+
+\begin{equation}\label{eq:pearsons_r_time}
+\hat{r} = \frac{\sum_{t=t_0}^{T}(\overline{X} - E(\overline{X}))(\overline{Y}-E(\overline{Y}))}{\sqrt{\sum_{t=t_0}^{T}(\overline{X}-E(\overline{X}))^2 (\overline{Y}-E(\overline{Y}))^2}},
+\end{equation}
+
+\noindent where the $\hat{\cdot}$ indicates temporal correlation, $\overline{X}=\overline{X(t)}$, $t_0$ and $T$ are the indices of the first and last tides in the sequence, and $E(\overline{X})$ is a temporal mean, given by
+
+\begin{equation}\label{eq:time_mean}
+E(\overline{X}) = E(\overline{X(t)}) = \frac{\sum_{t=t_0}^{T} \overline{X(t)}}{T-t_0},
+\end{equation}
+
+\noindent where $T-t_0+1$ is the total number of contiguous tides.
+
+
+\subsection{Wave Parameter Estimation}\label{Methods:Wavedata}
+
+Data from the pressure transducer deployed near the neap low water line were processed in 12 min segments to compute standard wave statistics: significant wave height, $H_s$, computed as $4\sigma_p$ with $\sigma_p$ being the square-root of the variance of the pressure time series; and the peak wave period, $T_p$, corresponding to the location in inverse frequency space of maximum spectral density in the pressure spectrum. %Break-point significant wave heights were computed following the method of \citet[][p. 115]{Dean_Dalrymple1984}. 
+
+The `deep water' wave steepness $H_0/L_0$ was computed to help draw a distinction between forcing states leading to an energetic shore break ($H_0/L_0 > 0.01$, $H_s > ~0.5$ m) and more reflective conditions characterised by collapsing- or surging-type wave breaking ($H_0/L_0 < 0.01$) more typically associated with the formation of a berm, cusps, or other patterned bed states at Advocate Beach. In the wave steepness calculation, the deep water wave height, $H_0$, was taken to be equivalent to $H_s$, and the deep water wavelength, $L_0$, was computed using the linear surface gravity wave dispersion relation at the frequency of peak forcing ($=1/T_p$).
+
+
+\section{Results}\label{Results}
+
+\subsection{Overview of Forcing and Response}\label{Results:Forcing}
+
+A summary of the forcing conditions during the Advocate 2018 experiment is presented in Fig. \ref{fig:wavestats}. The experiment was conducted during a transition from neap to spring tides, with the tidal range increasing from \textit{ca}. 7.5 m at the outset to 11 m by the end of the experiment. The majority of tides were characterised by high steepness, wind-band incident waves leading to an energetic shorebreak. Sample energy spectra from high and low energy days are shown in Fig. \ref{fig:psd}.
+
+\begin{figure}[tbp] %/home/tristan/Documents/Projects/AdvocateBeach2018/src/visualization/plot_beach_profile_data.py
+	\includegraphics[width=\columnwidth]{figures/chapter3/wave_stats.png}
+	\caption[Wave data: Advocate 2018 experiment]{Summary wave data from the Advocate 2018 experiment. (a) Height of water, $h$, above the pressure transducer. (b) Significant wave height. (c) Peak wave period. (d) Wave steepness. The red dots indicate first data points of each tide.} %(e) Iribarren number.}
+	\label{fig:wavestats}
+\end{figure}
+
+\begin{figure}[tbp] %/home/tristan/Documents/Projects/AdvocateBeach2018/src/visualization/plot_beach_profile_data.py
+	\begin{center}
+		\includegraphics[width=0.75\columnwidth]{figures/chapter3/psd.png}
+		\caption[Energy spectra for high and low energy wave forcing]{Sample energy spectra for characteristic low energy (tide 19; blue) and high energy (tide 23; black) forcing days, computed using pressure data from the low tide frame-mounted pressure transducer.}
+		\label{fig:psd}
+	\end{center}
+\end{figure}
+
+The transition between neap and spring tides had important implications for the swash zone morpho-sedimentary processes: most notably, the presence of a coarse-grained high tide berm which persisted during fairweather conditions, migrating landward throughout the experiment. A second, inactive spring tide berm was also present throughout the experiment (Fig. \ref{fig:alltides_profiles}). Throughout this chapter, use of `berm region' is in reference to the region extending from the high water line to the base of the seaward face of the active high tide berm, where a natural break in the morphological and sedimentary profiles (positive to near zero-valued $\Delta z$, and decreased MGS in Fig. \ref{fig:alltides_profiles}) separated the berm from the remainder of the intertidal zone. The intertidal zone seaward of the berm region is hereafter referred to as the `mid-intertidal zone'.
+
+\begin{figure}[tbp] %/home/tristan/Documents/Projects/AdvocateBeach2018/src/visualization/plot_beach_profile_data.py
+	\includegraphics[width=\columnwidth]{figures/chapter3/surfaceplots_dz_grainsize.png}
+	\caption[Surface plots of bed level change and mean grain size by tide]{Beach morpho-sedimentary profile evolution, recorded each low tide between tides 14 and 27 on the cross-shore survey transect (CT). (a) Cumulative change in bed elevation from RTK GPS observations. (b) Mean grain size from photographs of the bed surface. Black triangles represent the estimated cross-shore coordinate of the high water line.}
+	\label{fig:alltides_profiles}
+\end{figure}
+
+The beach surface sediments were generally coarser near, and landward of, the high tide shoreline, the coarsest sediments corresponding to the nominal position of the active berm (Fig. \ref{fig:mean_MGS_profile}). On average, the mean grain sizes were finer in the intertidal zone seaward of the berm region. Note that the extent of the cross-shore profiles included in Figs. \ref{fig:alltides_profiles} and \ref{fig:mean_MGS_profile} represents only approximately one third of the full intertidal beach profile. In general, the grain size distribution became coarser near the low water shoreline, being characterised by a mixture of coarse sand and cobble- and boulder-sized material (not represented in the included data). 
+
+\begin{figure}[tbp] %/home/tristan/Documents/Projects/AdvocateBeach2018/src/visualization/plot_beach_profile_data.py
+	\begin{center}
+		\includegraphics[width=0.5\columnwidth]{figures/chapter3/mean_MGS_crossshore.png}
+		\caption[Cross-shore profile of mean grain size]{Profile of mean grain size, computed at each station in the cross-shore survey transect (CT) averaged over tides 14-27. The horizontal black lines indicate the standard deviation of the mean grain size over time, and the vertical lines indicate the minimum and maximum mean grain size at each cross-shore station. The grey-shaded region encompasses the range of high water line values during the experiment. The cross-shore coordinates of the two longshore survey transects, LT1 and LT2, are indicated by the dashed and dash-dotted lines, respectively. \label{fig:mean_MGS_profile}}
+	\end{center}
+\end{figure}
+
+Fig. \ref{fig:alltides_profiles} shows the change in bed elevation and mean grain size for the cross-shore survey profile over all the tides that were surveyed consecutively (tides 14-27). The shoreward migration of the high tide berm is visible, and shows the greatest morphological relief nearer the end of the experiment. Coarser grain sizes correspond to the landward extent of the high tide berm, which also generally corresponded to the HWL. The distribution of coarse and fine surficial sediments in the mid-intertidal zone displayed some spatial structure, though this structure did not persist from tide to tide. In the upper intertidal zone, within \textit{ca}. 10 m seaward of the HWL, coarse and fine sediment `patches' occasionally appeared to persist for longer (i.e., multiple tides). Unlike the previous experiments at Advocate Beach, there were no instances of well-defined cusp formation during the 2018 field experiment. 
+
+A wide variety of features were observed within the mid-intertidal zone. In general, the features had low morphological relief (\textit{ca}. 5 cm maximum), and were more identifiable as coherent but disorganised sedimentary structures, which manifested as irregular alternating bands of coarse- and fine-grained sediments along- or across-shore, grain size `patchiness', or larger undulations in morphology and grain size along- or across-shore. Some examples of these features are shown in Fig. \ref{fig:patchiness_photo3}.
+
+\begin{figure}[tbp] %/home/tristan/Documents/Projects/AdvocateBeach2018/src/visualization/plot_beach_profile_data.py
+	\includegraphics[width=\columnwidth]{figures/chapter3/photos/collage6.png}
+	\caption[Photographs of grain size segregation at Advocate Beach]{Photographs of features exhibiting grain size segregation at Advocate Beach during low tide 11 (a,c,d), 16 (b), 17 (e), and 19 (f).}
+	\label{fig:patchiness_photo3}
+\end{figure}
+
+
+
+\subsection{Correlation Results}\label{Results:Correlation}
+
+The mean grain size data from the mid-intertidal zone beach face are strongly anti-correlated with significant wave height, with wide-scale beach fining being observed following energetic wave conditions. Time series of the mean significant wave height and spatially-averaged mean grain size, $\overline{\mathrm{MGS}}$, for each tide are shown in Fig. \ref{fig:hsig_mgs}, and scatter plots shown in Fig. \ref{fig:hsig_steepness_mgs_scatter}, using grain size values from the most seaward longshore survey transect, LT1. The Pearson correlation coefficients computed between the mean grain size and mean wave statistics are listed in Table \ref{table:temporal_correlations}. The spatially averaged mean grain sizes are highly correlated with both the significant wave height ($\hat{r}=-0.79$) and the deep water wave steepness ($\hat{r}=-0.84$). The values of the correlation coefficients for both $\overline{\mathrm{MGS}}$ and mean significant wave height, and $\overline{\mathrm{MGS}}$ and mean wave steepness are not significant at the 95\% level if computed using data from the more shoreward survey transect, LT2.
+
+\begin{table}[tbp!]
+	\caption[Temporal correlation coefficients: mean grain size and wave parameters]{Temporal correlation coefficients, $\hat{r}$, between spatial averages of mean grain size along the indicated transect, $\overline{\mathrm{MGS}}$, and wave forcing parameters.\label{table:temporal_correlations}} 
+	\centering
+	\begin{tabular}{lccc}
+		\hline
+		correlates & survey transect & $\hat{r}$ & 95\% confidence interval\\
+		\hline
+		$\overline{\mathrm{MGS}}$, $4\sigma_p$ & LT1 & -0.79$^{*}$ & (-0.39, -0.94)\\
+		$\overline{\mathrm{MGS}}$, $T_p$ & LT1 & 0.04 & (-0.55, 0.60)\\
+		$\overline{\mathrm{MGS}}$, $H_0/L_0$ & LT1 & -0.84$^{*}$ & (-0.51, -0.95)\\
+		$\overline{\mathrm{MGS}}$, $4\sigma_p$ & LT2 & -0.24 & (-0.70, 0.36)\\
+		$\overline{\mathrm{MGS}}$, $T_p$ & LT2 & 0.08 & (-0.60, 0.49)\\
+		$\overline{\mathrm{MGS}}$, $H_0/L_0$ & LT2 & -0.24 & (-0.70, 0.36)\\
+		\hline
+		\multicolumn{4}{l}{$^{*}$ Statistically significant at the 95\% level.}
+	\end{tabular}
+\end{table}
+
+\begin{figure}[tbp] %/home/tristan/Documents/Projects/AdvocateBeach2018/src/visualization/plot_beach_profile_data.py
+	\begin{center}
+		\includegraphics[width=0.75\columnwidth]{figures/chapter3/grain_size_and_waveheight_timeseries.png}
+		\caption[Time series of mean significant wave height and mean surficial grian size]{Time series of mean significant wave height and $\overline{\mathrm{MGS}}$ for transect LT1.\label{fig:hsig_mgs}}
+	\end{center}
+\end{figure}
+
+\begin{figure}[tbp] %/home/tristan/Documents/Projects/AdvocateBeach2018/src/visualization/plot_beach_profile_data.py
+	\begin{center}
+		\includegraphics[width=0.7\columnwidth]{figures/chapter3/Hsig_and_steepness_vs_MGS_scatter.png}
+		\caption[Mean surfical grain size versus significant wave height, wave steepness]{Scatter plots of the spatially averaged mean grain size $\overline{\mathrm{MGS}}$, computed over the seaward-most longshore survey transect LT1 for each of the surveyed tides, versus (a) the mean significant wave height $H_s$ and (b) the deep water wave steepness $H_0/L_0$. \label{fig:hsig_steepness_mgs_scatter}}
+	\end{center}
+\end{figure}
+
+Fig. \ref{fig:corr_coeffs_spatial} shows scatter plots of all bed level change, $\Delta z$, and mean grain size change, $\Delta$MGS, observations between tides 14 and 27, for LT1, the most seaward longshore transect, and LT2, the longshore transect roughly corresponding to the mean position the high tide berm. A positive correlation is apparent in the LT1 data ($r=0.37$). Little visually discernible correlation is evident from the LT2 data ($r=0.16$), though the correlation increases significantly if only examining tides characterised by high steepness waves. A summary of the spatial correlations between changes in bed level and mean grain size is presented in Table \ref{table:spatial_correlations}. The correlation output for the LT2 data is nearly identical if stations landward of the HWL are omitted from the analysis (true only for tide 16; see Fig. \ref{fig:alltides_profiles}).
+
+\begin{table}[tbp!]
+	\caption[Spatial correlations between changes in bed level and changes in mean grain size]{Spatial correlations, $r$, between changes in bed level, $\Delta z$, and changes in mean grain size, $\Delta$MGS.} 
+	\label{table:spatial_correlations}
+	\centering
+	\begin{tabular}{lcc}
+		\hline
+		survey transect & $r$ & 95\% confidence interval\\
+		\hline
+		LT1 & 0.37$^{*}$ & (0.27, 0.47)\\
+		LT1 ($H_0/L_0 < 0.01$) & 0.36$^{*}$ & (0.22, 0.49)\\
+		LT1 ($H_0/L_0 >= 0.01$) & 0.39$^{*}$ & (0.25, 0.52)\\
+		LT2 & 0.16$^{*}$ & (0.05, 0.26)\\
+		LT2 ($H_0/L_0 < 0.01$) & 0.06 & (-0.08, 0.21)\\
+		LT2 ($H_0/L_0 >= 0.01$) & 0.30$^{*}$ & (0.15, 0.44)\\
+		\hline
+		\multicolumn{3}{l}{$^{*}$ Statistically significant at the 95\% level.}
+		%		\footnote{$^{*}$ Statistically significant at the 95\% level.}
+	\end{tabular}
+\end{table}
+
+A summary of the correlation coefficients between $\Delta z$ and $\Delta$MGS for each of the longshore transects is shown in Fig. \ref{fig:corr_coeffs_spatial}. The correlation values increase positively with increasing distance to seaward. The strongest correlations are associated with LT1 -- the seaward-most longshore transect. The correlation coefficient values are not significantly different from zero for transects located landward of the nominal HWL.
+
+Correlation coefficients associated with data from individual tides are shown in Fig. \ref{fig:corr_coeffs_all}, for LT1 and LT2. Since these correlations were limited by the number of samples in the survey transect, few of the results are statistically significant at the 95\% level; however, there are some notably consistent trends. Similar to the correlation results above, higher correlations are evident for data from the seaward-most survey transect. From the LT1 data, the correlation coefficients between $\Delta z$ and MGS, and between $\Delta z$ and $\Delta$MGS were consistently positive, having centroid values that are commensurate with the longer-term correlation results (Fig. \ref{fig:corr_coeffs_spatial}), which have higher degrees of statistical significance. With two exceptions, the correlation coefficients between $\Delta z$ and the mean grain size observed at the previous low tide, MGS$'$, were negative, having a centroid value of $r\approx -0.2$. The correlation of $\Delta z$ with $\Delta z$ from the previous low tide, $\Delta z'$, was consistently negative, with a centroid value of $r\approx -0.5$. The centroid values of the correlation coefficients associated with LT2 exhibit similar trends, though are closer to zero and have a higher degree of variation. 
+
+With the exception of the strong anticorrelation between $\overline{\mathrm{MGS}}$ and the significant wave height, comparisons between $\overline{\Delta z}$, $\overline{\mathrm{MGS}}$, and mean wave forcing parameters (wave height, peak period, sea-band wave energy, and steepness) did not yield any statistically significant temporal correlations or clear visual trends. The potential influence of the wave forcing on the spatial correlation between $\Delta z$ and $\Delta$MGS (Fig. \ref{fig:corr_coeffs_spatial}) was investigated using data from LT1 by separating tides characterised by high wave steepness forcing, $H_0/L_0 > 0.01$, from those characterised by low steepness forcing, $H_0/L_0 < 0.01$, and carrying out the correlation computations on each. A steepness value of 0.01 is often used to demarcate accretive from erosive conditions \citep[e.g.,][]{Masselink_etal2007}. The correlation coefficients are nearly identical for both datasets: $r=0.39$ with a 95\% confidence interval of (0.25, 0.52) for the high steepness set, and $r=0.36$ in (0.22, 0.49) for the low steepness set. The result is comparable when a significant wave height threshold is used instead (threshold values of $H_{s} = 0.5$ m and $0.2$ m were tried).
+
+The data from LT1 were also analyzed following the method of \citet{Masselink_etal2007} to facilitate comparison with their results. Bed level change ($\Delta z$) at each survey station was classed as accretion ($\Delta z \geq 0.02$ m), no change ($-0.02 < \Delta z < 0.02$ m), or erosion ($\Delta z \leq -0.02$ m). The mean and standard deviation of the MGS associated with the $\Delta z$ instances were computed for each of the three categories. The results are listed in Table \ref{table:dz_mgs}. The trend of change in MGS was examined by tabulating the proportion of fining ($\Delta$MGS $< 0$) versus coarsening ($\Delta$MGS $> 0$) instances within the accretion and erosion categories. As summarised in Table \ref{table:dz_dmgs}, surficial sediment coarsening occurred during 86\% of the instances of accretion, and fining occurred during 56\% of the erosion instances. %These results, and those of \citet{Masselink_etal2007}, are discussed further in section \ref{section:discussion}. 
+
+\begin{figure}[tbp] %/home/tristan/Documents/Projects/AdvocateBeach2018/src/visualization/plot_beach_profile_data.py
+	\begin{center}
+		%	\includegraphics[width=0.75\columnwidth]{/home/tristan2/Documents/PhD/Dissertation/figures/chapter3/dz_dmgs_scatter.png}
+		\includegraphics[width=0.8\columnwidth]{figures/chapter3/combined_scatter_vertical.png}
+		\caption[Cross-shore dependence of correlations between bed level and mean grain size change]{Scatter plots of the change in bed level ($\Delta z$) versus the change in mean grain size ($\Delta$ MGS) using data from: (a) longshore survey transect LT2, corresponding roughly to the time-averaged cross-shore location of the high tide berm ($r=0.17$, with a 95\% confidence interval of (0.06, 0.27)); and (b) longshore survey transect LT1, the most seaward survey transect, positioned down-slope of the nominal berm location, in the mid-intertidal zone ($r=0.38$, 95\% confidence interval of (0.28, 0.47)). The data from all consecutively surveyed low tides are shown, with the mean subtracted from both $\Delta z$ and $\Delta$MGS for each tide time step. (c) Pearson correlation coefficients for $\Delta z$ and $\Delta$MGS for all of the longshore survey transects, i.e., LT1 (yellow), LT2 (blue), and each of the six longshore transects comprising the densely surveyed grid, DG (black). The correlations are based on all samples collected on each of the eight longshore transects throughout the experiment, with tide-specific means removed. The tails indicate 95\% confidence intervals. The horizontal black line, dark grey-shaded region, and light grey-shaded region indicate the respective mean, standard deviation, and range of the cross-shore coordinate of the high water line over the 13 tides. Note that the $y=-13$ m coordinate was sampled twice: i.e., both LT2 and the third-most shoreward transect of DG.}
+		\label{fig:corr_coeffs_spatial}
+	\end{center}
+\end{figure}
+
+\begin{figure}[tbp] %/home/tristan/Documents/Projects/AdvocateBeach2018/src/visualization/plot_beach_profile_data.py
+	\begin{center}
+		\includegraphics[width=\columnwidth]{figures/chapter3/correlation_spatialonly.png}
+		\caption[Spatial correlation coefficients]{Pearson correlation coefficients, $r$, associated with longshore survey transects (a) LT2, and (b) LT1. The correlations are between bed elevation change ($\Delta z$) and: mean grain size (MGS), the change in mean grain size ($\Delta$MGS), the mean grain size observed during the previous survey (MGS$'$), and the change in bed elevation observed during the previous survey ($\Delta z'$). Each `x' represents the correlation coefficient for data from the given survey transect for a single tide.}
+		\label{fig:corr_coeffs_all}
+	\end{center}
+\end{figure}
+
+\begin{table}[tbp!]
+	\caption[Mean grain size correspoonding to bed accretion, no change, and erosion]{Average mean grain size (MGS) for three different classes of bed-level change: accretion, no change, and erosion associated with the most seaward longshore survey transect, LT1. The number of occurrences for each class, $N$, is also indicated.} 
+	\label{table:dz_mgs}
+	\centering
+	\begin{tabular}{ccc}
+		\hline
+		bed state & mean size (mm) & $N$\\
+		\hline
+		%		accretion & 15.99 $\pm$ 8.29 & 151\\
+		%		no change & 15.71 $\pm$ 7.55 & 292\\
+		%		erosion   & 12.52 $\pm$ 7.31 & 210\\
+		accretion & 25.7 $\pm$ 6.7 & 57\\
+		no change & 20.7 $\pm$ 7.5 & 165\\
+		erosion   & 19.6 $\pm$ 7.5 & 90\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[tbp!]
+	\caption[Occurrence counts of bed fining and coarsening during bed accretion and erosion]{Occurrence counts and occurrence ratios, in parentheses, between morphological response and change in mean sediment size for the accretion and erosion classes of bed level change associated with the most seaward longshore survey transect, LT1.} 
+	\label{table:dz_dmgs}
+	\centering
+	\begin{tabular}{cccc}
+		\hline
+		bed state & finer & coarser & $N$\\
+		\hline
+		accretion & 8 (0.14) & 49 (0.86) & 57\\
+		erosion & 50 (0.56) & 40 (0.44) & 90\\
+		\hline
+	\end{tabular}
+\end{table}
+
+
+\section{Discussion}\label{Discussion}
+
+The morpho-sedimentary evolution of a mixed sand-gravel beach was investigated over 14 consecutive tidal cycles at the scale of the intertidal zone ($O$(10-100) m), through bed level and photographic grain size sampling over a fixed survey grid during low tide when the intertidal zone was exposed. The forcing conditions were dominated by steep, wind-band incident waves leading to an energetic shore break, interspersed by periods of low steepness wave incidence and berm building (Figs. \ref{fig:wavestats} and \ref{fig:alltides_profiles}). 
+
+\subsection{Response of Surficial Sediments to Varying Wave Forcing}\label{Discussion:StormFining}
+
+The time series of spatially-averaged surficial sediment grain size in the mid-intertidal zone indicates a clear dependence on the significant wave height and wave steepness (Fig. \ref{fig:hsig_mgs}). High wave energy conditions resulted in surficial sediment fining across the intertidal zone, and low energy conditions resulted in bed surface coarsening. This result is counter-intuitive in the context of our broader understanding of (especially sand) beach response to changes in forcing \citep[e.g.,][]{Bascom1951, Masselink_etal2007}. However, this response has been previously observed at Advocate Beach \citep{Hay_etal2014}, as well as at other MSG sites reported on in the literature \citep{Nordstrom_Jackson1993, Pontee_etal2004, Curtiss_etal2009, Miller_etal2011}. Typical forcing conditions and beach characteristics for each of the sites reported in the literature are summarised in Table \ref{table:beach_summary}. Like Advocate, all of these beaches are steep, with slopes of at least 1:10.
+
+\begin{landscape}
+	%\rotatebox{90}{
+	%\centering
+	\begin{table}[tbp!]
+		\caption[Mixed sand-gravel beaches: summary of reported beach surface fining during storms]{Summary of studies from the mixed sand-gravel beach literature reporting fining of beach surface sediments during periods of high energy wave forcing.\label{table:beach_summary}} 
+		\centering
+		\begin{tabular}{llccl}
+			\hline
+			study & location & tide range & slope ($\tan\beta_s$) & wave height; period\\
+			\hline
+			\citet{Nordstrom_Jackson1993} & Delaware Bay, USA & 1.6 m & 0.11 & $>0.5$ m (high energy); NA\\
+			\citet{Pontee_etal2004} & 3 sites in East Anglia, UK & 2-3 m & 0.10-0.15 & 0.4-0.5 m (annual); \textit{ca}. 6 s\\
+			\citet{Curtiss_etal2009} & Puget Sound, WA, USA & 3.5 m & 0.14-0.20 & 0.10-0.24 m (during 4 storms); 1-3 s\\
+			\citet{Miller_etal2011} & Juan de Fuca Strait, WA, USA & 1.4 m & 0.12-0.13 & 0.47 m (6 month); 4 s (wind)\\%; 10 s (swell)\\
+			\citet{Hay_etal2014} & Advocate Beach, NS, CA & 10 m & 0.12 & 0.3-0.5 m; 4-6 s\\
+			\hline
+		\end{tabular}
+	\end{table}
+\end{landscape}
+%}
+
+The relationship between wave forcing and mean surface grain sizes is far from clear. For example, though \citet{Pontee_etal2004} observed an inverse correlation between mean grain size and wave height in general, they only claimed statistical significance of the result at one of their three study sites, and in some cases observed an opposite response. It is interesting to note that all of the sites described above experience some degree of wave energy limitation; the sites studied by \citeauthor{Pontee_etal2004} are the only ones which face the open ocean, though the wave energy is limited by a series of offshore sand bars. The sites listed in Table \ref{table:beach_summary} span a wide range of tide regimes, from micro- to megatidal. The similarities and differences between the sites may provide some insight into the mechanisms for fining during more energetic wave forcing, about which a range of explanations have been proposed: \citeauthor{Pontee_etal2004} suggested that onshore transport of sand from the nearshore region during periods of post-storm swell could explain the sandy characteristics of post-storm profiles at two of their beaches. They also suggested that intertidal fining could be a result of larger particles being concentrated in the berm and step. \citeauthor{Curtiss_etal2009} noted that the observed surficial fining during storm conditions is consistent with a `reverse winnowing' process, wherein larger particles are selectively removed from the bed as a result of enhanced mobility. \citeauthor{Miller_etal2011} noted that the increase in sand visible at the bed surface following high waves was suggestive of thorough mixing of the beach substrate. At Advocate Beach, during highly energetic wave conditions and on the rising tide, \citeauthor{Hay_etal2014} observed the formation of metre-scale wave orbital ripples with ripple crests built of fine sediments and ripple troughs containing a coarse sediment lag. These ripples were not present on the exposed beach face after the subsequent ebb tide, the beach surface instead being both planar and covered with a thin layer of fine material. \citeauthor{Hay_etal2014} attributed this fining of the beach face sediment to the ripple crests being planed off by the swash during the falling tide, burying the coarser-grained material in the troughs.    
+
+Past observations of the grain size distribution at Advocate Beach have indicated that the sediments beneath the surficial layer remain well-mixed, regardless of the forcing conditions, suggesting that the surf and swash zones can be approximately considered as a closed sedimentary unit. Thus, the mechanisms suggested by \citeauthor{Pontee_etal2004}, and \citeauthor{Curtiss_etal2009}, involving removal of sediments from the beach face to the nearshore, or vice versa, do not seem likely at the Advocate site. The factor of 10 differences among the tidal ranges listed in Table \ref{table:beach_summary} suggests, given the factor of only 2 differences in slope, that cross-shore translation of the shoreline may not be a requirement for beach surface fining in response to energetic waves. The implication is that beach surface fining in response to energetic waves may be a solely swash zone process, not requiring interaction between surf- and swash zone sediment transport processes, as required by the ripple planing mechanism proposed by \citeauthor{Hay_etal2014}. 
+
+The following alternative mechanism is proposed (see the accompanying schematic in Fig. \ref{fig:storm_fining}): During periods of high energy wave forcing, the swash zone increases from its characteristic width of $O$(1 m) during fairweather forcing to a width of $O$(10 m). The lower settling velocity of sand-sized particles contributes to a larger settling lag -- the time required for suspended particles to settle to the bottom through slowly flowing water \citep{Masselink_Puleo2006} -- meaning the finer particles are deposited later in the swash uprush phase. Increased infiltration near the landward edge of the swash zone, due to the swash surpassing the groundwater exit point, contributes to the deposition of any material still in saltation or suspension. The coarser particles, which are typically transported through rolling, sliding, or occasional saltation \citep{Carter_Orford1984}, are deposited earlier in the uprush phase. The result is the deposition of a layer of finer-grained material near the shoreward-edge of the swash zone, atop the more well-mixed substrate. During fairweather forcing, the shorebreak and swash zone are more closely coupled. The gravel- and cobble-sized particles are readily mobilised in the lower swash following bore collapse, and remain mobile due to rejection by the finer substrate leading to overpassing, or are deposited near the landward- or shoreward edge of the swash zone. Unlike in the energetic forcing case, the characteristic transport range of the coarser particles is of the same order as the swash zone width, meaning the settling leg mechanism for surficial fining is not effective. The tendency for gravel- and cobble-sized particles to propagate shoreward due to swash velocity asymmetry has been acknowledged elsewhere \citep{Carr1983}. The sequences described above are independent of shoreline translation induced by tides. However, tides may serve to reinforce the mechanisms described, particularly for the case of surficial sediment coarsening during fairweather conditions, wherein the presence of a nascent, coarse-grained beach step may serve as a source region for coarse particles during ebb tide. Note also that the surficial fining and coarsening mechanisms proposed above are a result of local processes, i.e., they do not require an exchange of material between the surf- and swash zones.
+
+\begin{figure}[tbp] %/home/tristan/Documents/Projects/AdvocateBeach2018/src/visualization/plot_beach_profile_data.py
+	\begin{center}
+		\includegraphics[width=\columnwidth]{figures/chapter3/storm_fining_berm.png}
+		\caption[Schematic description of surficial sediment fining mechanisms during energetic wave forcing]{Schematic description of the proposed mechanisms leading to surficial sediment fining during energetic wave forcing (left) and surficial sediment coarsening during fairweather wave forcing (right).}
+		\label{fig:storm_fining}
+	\end{center}
+\end{figure}
+
+The proposed surficial fining mechanism is similar to the beach recovery mechanism described by \citet{Bramato_etal2012} on a MSG beach following a storm-associated erosion event, in which, during periods of accumulation, the longer suspension time of the finer sediments causes them to be deposited in a layer atop the coarser sediments. However, their mechanism is associated with fairweather forcing, offshore transport of sand and beach surficial coarsening being associated with erosive storm conditions.
+
+There may be site-specific mechanisms which depend upon a complicated time history of antecedent morphology, grain size, and forcing. It would be of interest to carry out a full sedimentological investigation at a MSG site that includes high resolution sampling in space (vertical and horizontal), at tidal time scales, in order to further constrain the potential mechanisms.
+
+
+\subsection{Morpho-Sedimentary Correlation at the Beach Scale}\label{Discussion:Correlation}
+
+The results from Section \ref{Results:Correlation} clearly indicate that a spatial correlation exists between changes in bed level and mean surface grain size. Though the existence of this correlation is perhaps unsurprising given the acknowledged influence of bed texture on near-bed hydrodynamics and the prevalence of grain size sorting and pattern formation on MSG beaches, it has been difficult to establish in other cases. Indeed, similar studies by \citet{Masselink_etal2007} and \citet{Austin_Buscombe2008} found little evidence of correlation between morphological and grain size responses on coarse sand and gravel beaches, respectively. \citeauthor{Masselink_etal2007} sampled bed elevation and grain size over a \textit{ca}. 100 m cross-shore transect, over 40 tidal cycles. In most cases, they reported no correlation between bed level change and mean grain size or sorting, with the exceptions of coarse sediment patches near the beginning and end of their study which were associated with net erosion (i.e., correlations with opposite sign to those presented here) and decreases in sorting. In their gravel beach study, \citet{Austin_Buscombe2008} collected coincident observations of bed level, using manual surveying, and grain size from imaging methods. They observed some positive correlation between bed level change and mean grain size at the position of the berm and beach step, though a clear relationship was not otherwise observed. 
+
+A notable difference between Advocate Beach and the sites investigated by \citet{Masselink_etal2007} and \citet{Austin_Buscombe2008} is the much wider grain size distribution at Advocate: i.e., from less than 1 mm to greater than 200 mm at Advocate compared to coarse sand, $0.5 <$ MGS $< 1.0$ mm; and pure gravel, $5 <$ MGS $< 20$ mm. The presence of combined sand and gravel fractions has dynamical implications for sediment transport \citep[e.g.,][]{Wilcock_McArdell1993, Wilcock_McArdell1997, Wilcock_Crowe2003}, and may enhance morpho-sedimentary feedbacks leading to pronounced size-segregated pattern formation \citep[e.g.,][]{LonguetHiggins_Parkin1962, Guest_Hay2019}. 
+
+The correlation coefficients are highest for data sampled farthest to seaward of the high water line. There are two reasons why this might have been the case. The first is that five of the eight longshore survey transects were above the HWL for at least one survey. Omitting above-HWL data does little to change the correlation results, indicating that sediments at or near the HWL (interpreted as the swash runup maximum) were not acted upon by sufficient swash energy for a signal to emerge. This is supported by the notable increase in the correlation coefficient between $\Delta z$ and $\Delta$MGS at the more shoreward LT2 transect during high wave steepness forcing, when the swash zone width would have been greater. A different shoreline metric, e.g., the mean swash runup limit, might therefore be a more appropriate boundary. The second reason is that the beach surface near the nominal high water shoreline was typically characterised by the coarse sediments -- gravel and cobbles -- associated with the berm region. This coarse material near the HWL persisted through time (see Fig. \ref{fig:alltides_profiles}), migrating with the high tide shoreline during the neap-spring tide cycle. Conversely, the beach surface in the mid-intertidal zone, seaward of the berm region, was typically finer-grained with a greater degree of temporal variability. It seems likely that the inherent short-term variability of the bed level and mean grain size in the mid-intertidal zone, along with the presence of a more well-mixed surficial grain size distribution, was more conducive to the emergence of an observable signal.
+
+
+\subsection{Feedback Mechanisms}\label{Discussion:Feedback}
+
+At Advocate Beach, and on steep energetic beaches in general, the shorebreak does considerable reworking of the surficial sediments. This serves as a mechanism for morphological `smoothing', wherein features in the intertidal sediments are eradicated, particularly during periods of moderate- to high-energy wave forcing. The morphological smoothing implied by the negative correlation between changes in bed elevation from one tide to the next ($\Delta z$ and $\Delta z'$) is therefore unsurprising (consider, for instance, footprints in intertidal sand). More interesting is that the smoothing response of the mean grain size is similar -- the correlation between changes in bed elevation and the mean grain size from tide to tide ($\Delta z$ and MGS$'$) also being negative -- suggestive of the close linkage between spatial changes in morphology and grain size.
+
+%The smoothing influence of the shorebreak was documented by \cite{Coco_etal2004} for the case of beach cusps on a macrotidal sand beach. They reported modulation in the amplitude of cusps with the tidal phase, the amplitude increasing during ebb and decreasing during flood. They attributed the infilling of cusp bays during the flood phase to the proximity of the impinging shorebreak and surf zone. However, their proposed mechanism is treated in terms of sediment diffusion, rather than the wholesale reset of the surficial sediments, as is generally the case at the Advocate site.
+
+The positive correlations between changes in bed level and mean grain size ($\Delta z$ and MGS) and changes in bed level and changes in mean grain size ($\Delta z$ and $\Delta$MGS) at the beach surface can be explained in terms of mutually reinforcing feedbacks between flow, morphology, and the surficial grain size distribution. In the ebb-tide swash zone, emerging coarse patches enhance deposition: of fine material through kinetic sieving (effectively removing the fine particles from the beach surface), and of coarse material through grain interlocking and increased angles of pivot required for mobilisation. Away from the berm region, where sediments tend to remain coarse, it is logical that where grain sizes are large, there has been an increase in mean grain size (e.g., from the time-averaged mean). Conversely, coarse-grained topographic highs or fine-grained lows which form on the mid-intertidal beach face during the previous ebb tide are subjected to the destructive influence of the translating shorebreak during the subsequent flood. The result is the formation of transient morpho-sedimentary features throughout the mid-intertidal zone that form in the ebb tide swash, but which do not persist for longer than one tide. These transient features might manifest as grain size `patchiness', or alternating bands of coarser- and finer-grained sediments with long- or cross-shore structure (see Fig. \ref{fig:patchiness_photo3}). \citet{Buscombe_Masselink2006} described similar features as `textural mosaics' which act as textural surrogates to morphological bedforms, the effect of texture on the nearbed flow being considered in terms of its `hydraulic equivalence' to morphological patterning.
+
+Stations surveyed near the HWL may be associated with different morpho-sedimentary processes (e.g., berm, cusp formation) than the mid-tide beach face, and may not be acted upon by the translating shorebreak. At the high tide shoreline, the mechanism for mobilising and transporting accumulations of coarse grains (i.e., swash) is weakened through hydraulic drag and infiltration, increasing the likelihood that a morphological feature would persist through successive tides.
+
+
+\subsection{Implications for Cusp Formation}\label{Discussion:Cusps}
+
+The conspicuous lack of well-developed beach cusps during the 2018 Advocate Beach experiment is in contrast to previous experiments at Advocate Beach. It is proposed that the reason for this is related to the timing of the experiment within the spring-neap cycle: i.e., the range of days over which data were collected corresponded to the transition from neap to spring tides (see the water column heights registered by the pressure sensor, Fig. \ref{fig:wavestats}), as noted in Section \ref{Discussion:Correlation}. As a result, a coarse-grained high tide berm consistently coincided with the high water line (see Fig. \ref{fig:alltides_profiles}) -- at least during tides characterised by low- to moderate energy wave forcing, when cusps might have otherwise been expected to emerge. The coarse-grained berm migrated shoreward with the translation of the high tide shoreline.
+
+As suggested by the results of the correlation analysis, the coarse-grained berm region was less conducive to the evolution of spatially correlated morphological and sedimentary features than the more well-mixed mid-intertidal zone. A wide surficial grain size distribution promotes the rapid emergence of beach cusps; where a narrower range of surficial grain sizes exists, the variation in space of textural feedbacks on the flow is less pronounced, and the emergence timescale of features is much longer, or features may not form at all \citep[e.g.,][]{Guest_Hay2019}. A well-mixed substrate was also suggested by \citet{LonguetHiggins_Parkin1962} to favour the formation of beach cusps through feedback mechanisms: the relatively high permeability of incipient accumulations of coarse grains enhances deposition through the loss of swash energy, whereas the lower permeability of a sand-gravel mixture promotes the transport of overlying particles, since less swash energy is lost to infiltration. 
+
+
+\section{Conclusions}\label{Conclusions}
+
+The morpho-sedimentary evolution of a mixed sand-gravel beach was investigated at the scale of the beach profile, through the sampling of bed level and mean grain size at \textit{ca}. 2500 points collected over 14 tidal cycles. The forcing conditions were dominated by large (\textit{ca}. 10 m) tides and steep, wind-band incident waves leading to an energetic shore break, interspersed by periods of low steepness wave incidence and berm building. 
+
+A pronounced negative correlation between wave height and mean surficial grain size was observed. Though at odds with the prevailing understanding of sand beach grain size change in response to forcing, a similar inverse correlation has been observed at other mixed sand-gravel beach sites, under a range of forcing and tide conditions. All the studies of which we are aware that report fining of beach surface sediments under energetic wave forcing were conducted on steep MSG beaches experiencing some degree of wave energy limitation, though the tidal regimes varied from micro- to megatidal. The large differences in tidal range among these MSG beaches suggest that interplay between surf- and swash zone processes may not be of principal importance, and the dominant mechanism may be swash-related. However, given the relative scarcity of field studies at MSG beach settings which include concurrent observations of grain size and forcing conditions over timescales of several weeks, and the implications for the prediction of sediment dynamics in these environments, this suggestion warrants further investigation. 
+
+A persistent positive spatial correlation was observed between tide-to-tide changes in bed level in the intertidal zone, and both the mean grain size and mean grain size change. Negative spatial correlations were established between bed level change and both the mean grain size observed during the previous tide, and the change in bed level observed during the previous tide. Both the positive and negative correlations were more evident in the mid-intertidal zone, seaward of the region typically occupied by the active berm. The correlation results were attributed to the formation of ephemeral morpho-sedimentary features in the ebb tide swash zone through mutually reinforcing feedbacks, and the subsequent destruction of the features through shore-break and surf zone morphological smoothing during the following flood tide. The sign of the correlation between bed level change and mean grain size is opposite to the phenomenological relationship expected on other beach types \citep[e.g.,][]{Masselink_etal2007}. The lack of significant temporal correlations between bed level and grain size (from one tide to the next) may indicate that the sampling interval was not sufficiently short to resolve time-coherent processes that occur over timescales which are commensurate with the forcing ($O$(10) s), or with the evolution of the morpho-sedimentary features ($O$(1000) s).
+
+The persistent correlation between bed level and mean grain size changes supports the suggestion that sediment characteristics reinforce morphological change \citep[see][]{Buscombe_Masselink2006}, at least over tidal time scales.
+
+
+
+
+
+
+
+
+%% The Appendices part is started with the command \appendix;
+%% appendix sections are then done as normal sections
+\appendix
+
+\section{Digital grain sizing validation}\label{Appendix}
+
+The \citet{Buscombe2013} digital grain sizing (DGS) method used in this paper applies wavelet analysis to space-series transects of greyscale pixel intensities in the image(s) being processed. For the algorithm to function as intended, the images must contain only sediment, and individual grains must be resolvable by eye (i.e., have minimum grain diameters of 3-4 pixels). The output is a distribution of grain diameters characterised by information from the wavelet-derived power spectrum, i.e., using a statistical characterisation of each pixel transect, rather than characterisations of individual grains. Unlike earlier statistical methods, the \citet{Buscombe2013} method does not require a site- or sediment population-specific calibration. The method is therefore described as `transferable'. In comparison to earlier methods, the transferable wavelet method is more applicable to poorly sorted sediment populations.
+
+The DGS method requires a suite of input parameters: (1) a density parameter, which determines the spacing between pixel rows in the input image to be processed; (2) a pixel to physical unit scale factor; (3) a filtering boolean, which applies a Savitzki-Golay high-pass `flattening' filter if set to `True'; (4) a `notes' parameter, which defines the number of notes per octave to consider in the continuous wavelet transform; (5) an inverse pixel-to-frame-width ratio indicating the maximum diameter of grains to be resolved, in order to scale the maximum width of the `mother' Morlet wavelet; and (6) a conversion constant required to enable comparability of the output with distributions obtained in a different dimensional space. See \citet{Buscombe2013} or \citet{Cuttler_etal2017} for more detailed summaries of the parameters. With the exception of the pixel to physical unit scaling parameter, the pixel-to-frame-width ratio, and the dimensional conversion constant, the default parameter values were used in processing all images.
+
+A validation analysis was carried out to ensure the most suitable parameter values were selected. Twenty-four surface sediment samples taken from the beach were transported to the laboratory, where grain size distributions were computed by sieving, a manual image-based point-counting approach, and the wavelet-based DGS method. The mean sample mass was 1.28 kg. The samples were prepared and sieved following the method of \citet{Ingram1971} to obtain volume-by-weight grain size distributions. The point counting method is a standard validation technique for image-based grain sizing, in which an $n\times m$ uniformly spaced grid ($9\times 9$, in the case of this study) is overlaid on the image, and the widths of the grains beneath each grid vertex manually extracted to produce a grid-by-number type grain size distribution \citep[e.g.,][]{Barnard_etal2007, Buscombe_etal2010}. 
+
+To implement the point-counting and wavelet methods, each sample was placed in a tray and photographed using a tripod-mounted, downward-oriented Canon Powershot Elph 190, i.e., the same setup used for the survey photography at Advocate Beach. 3-5 images were captured for each sample, with the sediments being redistributed between each photograph. Each photograph was cropped so only sediment was visible in the image. The cropped images were digitally flatted in the process of implementing the DGS algorithm.
+
+Since the output of the DGS algorithm is a distribution of line-by-number grain diameters (see \citet{Kellerhals_Bray1971, Church_etal1987} for descriptions of the types particle size distributions), a conversion factor is needed in order for the DGS output to be comparable to (i.e., dimensionally consistent with) output from a sieve-type analysis. A commonly used conversion formula is \citep[e.g.][]{Kellerhals_Bray1971, Diplas_Sutherland1988, Cuttler_etal2017}:
+
+\begin{equation}\label{eq:surface_area_to_volume}
+p_{2,i} = \frac{p_{1,i} D_{i}^{x}}{\Sigma p_{1,i} D_{i}^{x}},
+\end{equation}
+
+\noindent where $p_{1,i}$ is the known proportion of the $i$th size fraction obtained using the input measure, $p_{2,i}$ is the proportion of the $i$th size fraction in units consistent with the desired output measure, $D_i$ is the grain diameter of the $i$th size fraction, and the exponent $x$ is a conversion constant whose value is empirically dependent upon the grain size distribution. Eq. (\ref{eq:surface_area_to_volume}) is based on the voidless cube model from \citet{Kellerhals_Bray1971}, which assumes a porosity of zero. The \citeauthor{Kellerhals_Bray1971} conversion is based on purely dimensional arguments, and does not depend upon an idealisation of the material. Thus, though the parameter $x$ can be theoretically defined based only on knowledge of the input and output measures, it is best employed as an empirically defined tuning parameter. For example, \citet{Diplas_Sutherland1988} suggested a value of $x=-0.47$ for converting from an area-by-number to volume-by-number type sample using natural sediments with 33\% porosity, though the voidless cube model would indicate a conversion constant of $x=-1$. Theoretically correct values of $x$ for a given conversion can be found in Table 2 of \citet{Kellerhals_Bray1971}. The same exponent values can be deduced using dimensional arguments. For example, converting from a grid-by-number type measure ($O(D^0)/O(D^0)$) to a volume-by-number measure ($O(D^3)/O(D^0)$) requires a conversion factor of 
+
+\begin{equation}\label{eq:order_balance}
+\frac{O(D^0)/O(D^0)}{O(D^3)/O(D^0)} = O(D^{-3}).
+\end{equation} 
+
+For the output from the wavelet method to be theoretically comparable to output from the sieve analysis, a conversion factor of $O(D^1)$ is required. Note that the same conversion is used for comparing output from the wavelet method to output from the manual point counting method, since the sieve method (volume-by-weight) and the point counting method (grid-by-number) share an $O(D^0)$ equivalence. 
+
+\begin{figure}
+	\includegraphics[width=\columnwidth]{figures/appendix2/DGS_sieve_validation.png}
+	\caption[Mean grain size and sorting: wavelet method versus sieve]{Mean grain sizes (left) and sorting parameters (right) computed using the wavelet-based DGS method, plotted against values obtained from sieve analysis, for values of the dimensional scaling parameter $x$ ranging from 0.5 to 1.5. \label{fig:validation_sieve}}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=\columnwidth]{figures/appendix2/DGS_ptcount_validation.png}
+	\caption[Mean grain size and sorting: wavelet method versus manual point count]{Mean grain sizes (left) and sorting parameters (right) computed using the wavelet-based DGS method, plotted against values obtained using the manual point counting method, for values of the dimensional scaling parameter $x$ ranging from 0.5 to 1.5. \label{fig:validation_ptcount}}
+\end{figure}
+
+For the validation analysis, $x$ values in the range of 0.5 through 1.5 were tested. RMS errors associated with all the $x$ values tested are summarized in Table \ref{table:rmse}, and results for a subset of the values are plotted in Figs. \ref{fig:validation_sieve} and \ref{fig:validation_ptcount} for the sieve and point count method comparisons, respectively. The best result in a minimised root mean square error sense was obtained using $x=0.8$ (RMSE=3.35 mm). Though the higher values for $x$ arguably lead to a more linear (though positively offset) relationship (see $x=1.5$ in Fig. \ref{fig:validation_sieve}), this comes at the expense of the ability to differentiate grain sizes in the low- to mid range -- i.e., the 10-20 mm mean grain size range -- which accounts for a large proportion of the grain size distribution. %  (see Fig. \ref{fig:bulk_grainsize})
+
+\begin{table}[tbp!]
+	\caption[RMS errors: mean grain size data from wavelet method and sieve]{Root mean square errors (RMSE) of the DGS and sieve-derived mean grain size data for the validation analysis.} 
+	\label{table:rmse}
+	\centering
+	\begin{tabular}{ccc}
+		\hline
+		$x$ & DGS-sieve RMSE (mm) & DGS-point count RMSE (mm)\\
+		\hline
+		0.5 & 4.11 & 4.63\\
+		0.7 & 3.43 & 4.36\\
+		0.8 & 3.35 & 4.39\\
+		0.9 & 3.48 & 4.55\\
+		1.0 & 3.81 & 4.83\\
+		1.2 & 4.90 & 5.71\\
+		1.3 & 5.71 & 6.27\\
+		1.5 & 7.08 & 7.56\\
+	\end{tabular}
+\end{table}
+
+%The maximum feature scale was maintained at a value of 56 mm.
+
+Other parameter values were held constant. The inverse pixel-to-frame-width ratio was set as 5.3, for a maximum resolved feature scale of 56 mm, given a cropped image frame with of 2453 pixels, and a pixel to metric scaling parameter value of 0.12. The inverse pixel-to-frame-width ratio of 5.3 was chosen so the maximum feature scale was consistent with the scale used to process the field survey images, which were cropped to different dimensions. Though this feature scale was not sufficient to resolve the largest grains in the distribution, it was deemed an acceptable compromise in the interest of optimising the representation of both the small and large diameter grains.
+
+Though an acceptable level of agreement was obtained between the mean grain sizes computed using the DGS method and the validation methods, higher order moments of the grain size distribution, namely, the grain size sorting parameter (i.e., the standard deviation of the grain size distribution), the grain size skewness, and the kurtosis, were not reproduced with the same quality. This was attributed to the broad and variable grain size distribution within a given image, and throughout the image set. Consequently, the measures of grain size other than the mean were omitted from any analyses.
+
+
+
+
+
+%% \section{}
+%% \label{}
+
+%% If you have bibdatabase file and want bibtex to generate the
+%% bibitems, please use
+%%
+  \bibliographystyle{elsarticle-harv} 
+%%  \bibliography{<your bibdatabase>}
+
+\bibliography{C:/School/Tristan/code/Latex/bib/biblio_full_TG}
+
+%% else use the following coding to input the bibitems directly in the
+%% TeX file.
+
+%\begin{thebibliography}{00}
+%
+%%% \bibitem[Author(year)]{label}
+%%% Text of bibliographic item
+%
+%\bibitem[ ()]{}
+%
+%\end{thebibliography}
+
+\end{document}
+
+\endinput
+%%
+%% End of file `elsarticle-template-harv.tex'.
