@@ -1,1 +1,13 @@
 figures/
+
+src/*.aux
+src/*.bbl
+src/*.blg
+src/*.log
+src/*.out
+src/*.pdf
+
+*.pdf
+
+Guest_HayJMSE2021_reviewed_edited_v2*
+MSD_Beach.tex
